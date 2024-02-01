@@ -7,6 +7,7 @@
   config.perSystem = {
     config,
     inputs',
+    pkgs,
     ...
   }: {
     config.devshells.default = {
@@ -18,6 +19,7 @@
       ];
 
       commands = [
+        {package = pkgs.gomod2nix;}
         {package = inputs'.flake-linter.packages.default;}
       ];
     };

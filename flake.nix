@@ -27,6 +27,13 @@
       url = "github:numtide/devshell";
       inputs.nixpkgs.follows = "srvos/nixpkgs";
     };
+    gomod2nix = {
+      url = "github:nix-community/gomod2nix";
+      inputs = {
+        nixpkgs.follows = "srvos/nixpkgs";
+        flake-utils.follows = "devshell/flake-utils";
+      };
+    };
     process-compose-flake.url = "github:Platonic-Systems/process-compose-flake";
     harmonia = {
       url = "github:nix-community/harmonia";

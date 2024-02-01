@@ -27,7 +27,7 @@
       dev.settings.processes = {
         nats-server = {
           working_dir = "$NATS_HOME";
-          command = ''${lib.getExe pkgs.nats-server} -c ./nats.conf -sd ./'';
+          command = ''${lib.getExe pkgs.nats-server} -c ./nats.conf -D -sd ./'';
           readiness_probe = {
             http_get = {
               host = "127.0.0.1";
@@ -57,6 +57,7 @@
               # add some users
               nsc add user -a Exp -n Admin
               nsc add user -a Exp -n Node
+              nsc add user -a Exp -n EchoService --bearer
 
               # push accounts to the server
               nsc push
