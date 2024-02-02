@@ -5,14 +5,13 @@
       text = ''
         ## Default NATS server configuration (see: https://docs.nats.io/running-a-nats-service/configuration)
 
-        ## Host for client connections.
-        host: "127.0.0.1"
-
         ## Port for client connections.
         port: 4222
 
         ## Port for monitoring
         http_port: 8222
+
+        client_advertise: 192.168.127.1:4222
 
         ## Configuration map for JetStream.
         ## see: https://docs.nats.io/running-a-nats-service/configuration#jetstream
