@@ -3,6 +3,7 @@
   cni-plugins,
   nex-source,
   firecracker,
+  makeWrapper,
   tc-redirect-tap,
   buildGoModule,
 }:
@@ -22,18 +23,24 @@ buildGoModule rec {
     "-X 'main.BUILDDATE=Nix'"
   ];
 
-  # runtime dependencies
-  buildInputs = [
-    cni-plugins
-    firecracker
-    tc-redirect-tap
-  ];
-
   subPackages = [
     "nex"
     "agent/fc-image"
     "agent/cmd/nex-agent"
   ];
+
+  nativeBuildInputs = [makeWrapper];
+
+  postInstall = let
+    runtimePkgs = [
+      cni-plugins
+      firecracker
+      tc-redirect-tap
+    ];
+  in ''
+    wrapProgram $out/bin/nex \
+        --prefix PATH : ${lib.makeBinPath runtimePkgs}
+  '';
 
   meta = with lib; {
     description = "The NATS execution engine";
