@@ -1,6 +1,5 @@
 {
   lib,
-  cni,
   cni-plugins,
   nex-source,
   firecracker,
@@ -13,19 +12,18 @@ buildGoModule rec {
 
   src = nex-source;
 
-  vendorHash = "sha256-xAH/usI/qF78r4RoNfuXfCpkR4swg7V5ntr4MK2JTtk=";
+  vendorHash = "sha256-/rZjZ8XH33ZEdID0ZJNQyk1I+IujU6Rx6Vr5ZIArtNY=";
 
   ldflags = [
     "-s"
     "-w"
     "-X 'main.VERSION=0.1.3'"
-    "-X 'main.COMMIT=${src.shortRev}'"
+    "-X 'main.COMMIT=${lib.attrByPath ["shortRev"] "unknown" src}'"
     "-X 'main.BUILDDATE=Nix'"
   ];
 
   # runtime dependencies
   buildInputs = [
-    cni
     cni-plugins
     firecracker
     tc-redirect-tap

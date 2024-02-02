@@ -56,7 +56,7 @@
       };
     };
     nex-source = {
-      url = "github:synadia-io/nex/0.1.3";
+      url = "github:brianmcgee/nex/feat/better-path";
       flake = false;
     };
     tc-redirect-tap-source = {
