@@ -11,15 +11,19 @@
     };
 
     config.devshells.default = {
-      commands = [
+      commands = let
+        category = "development";
+      in [
         {
-          help = "run local dev services";
           name = "dev";
+          inherit category;
+          help = "run local dev services";
           command = ''nix run .#dev "$@"'';
         }
         {
-          help = "re-initialise data directory";
           name = "dev-init";
+          inherit category;
+          help = "re-initialise data directory";
           command = "rm -rf $PRJ_DATA_DIR && direnv reload";
         }
       ];

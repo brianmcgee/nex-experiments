@@ -21,8 +21,9 @@
       commands = [
         {package = pkgs.gomod2nix;}
         {package = inputs'.flake-linter.packages.default;}
-
         {
+          category = "development";
+          help = "remove stale network namespaces";
           package = pkgs.writeShellApplication {
             name = "clean";
             text = ''
@@ -33,6 +34,21 @@
               done
             '';
           };
+        }
+        {
+          category = "docs";
+          package = pkgs.vhs;
+          help = "generate terminal gifs";
+        }
+        {
+          category = "docs";
+          help = "regenerate gifs for docs";
+          name = "gifs";
+          command = ''
+            for tape in $PRJ_ROOT/docs/vhs/*; do
+                vhs $tape -o "$PRJ_ROOT/docs/assets/$(basename $tape .tape).gif"
+            done
+          '';
         }
       ];
     };

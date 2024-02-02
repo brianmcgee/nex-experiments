@@ -21,7 +21,7 @@ buildGoApplication rec {
     "-extldflags '-static -L${musl}/lib'"
   ];
 
-  subPackages = ["services/echo"];
+  subPackages = ["examples/services/echo"];
 
   meta = with lib; {
     mainProgram = "echo";

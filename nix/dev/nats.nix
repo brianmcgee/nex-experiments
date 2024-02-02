@@ -123,15 +123,19 @@
         pkgs.nats-top
       ];
 
-      commands = [
+      commands = let
+        category = "synadia";
+      in [
         # customise the nsc and nats commands to lock their state into the .data directory
         {
           name = "nsc";
+          inherit category;
           help = "creates NATS operators, accounts, users, and manage their permissions";
           command = ''XDG_CONFIG_HOME=$PRJ_DATA_DIR ${pkgs.nsc}/bin/nsc -H "$NSC_HOME" "$@"'';
         }
         {
           name = "nats";
+          inherit category;
           help = "NATS Server and JetStream administration";
           command = ''XDG_CONFIG_HOME=$PRJ_DATA_DIR ${pkgs.natscli}/bin/nats "$@"'';
         }
