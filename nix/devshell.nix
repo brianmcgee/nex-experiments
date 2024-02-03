@@ -11,15 +11,10 @@
     ...
   }: {
     config.devshells.default = {
-      env = [
-        {
-          name = "LD_LIBRARY_PATH";
-          value = "$DEVSHELL_DIR/lib";
-        }
-      ];
-
       commands = [
         {package = pkgs.gomod2nix;}
+        {package = pkgs.go-task;}
+        {package = pkgs.ginkgo;}
         {package = inputs'.flake-linter.packages.default;}
         {
           category = "development";
