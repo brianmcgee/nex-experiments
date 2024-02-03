@@ -15,6 +15,7 @@
         {package = pkgs.gomod2nix;}
         {package = pkgs.go-task;}
         {package = pkgs.ginkgo;}
+        {package = pkgs.firecracker;}
         {package = inputs'.flake-linter.packages.default;}
         {
           category = "development";
