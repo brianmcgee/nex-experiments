@@ -20,6 +20,8 @@ buildGoModule rec {
 
   ldflags = ["-s" "-w"];
 
+  CGO_ENABLED = 0;
+
   subPackages = ["cmd/tc-redirect-tap"];
 
   # runtime dependencies
