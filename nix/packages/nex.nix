@@ -13,7 +13,7 @@ buildGoModule rec {
 
   src = nex-source;
 
-  vendorHash = "sha256-/rZjZ8XH33ZEdID0ZJNQyk1I+IujU6Rx6Vr5ZIArtNY=";
+  vendorHash = "sha256-lGZuFTllsKjYXsEroH+HVocpEx5s2eZxXrDcALWwppY=";
 
   ldflags = [
     "-s"
@@ -26,7 +26,6 @@ buildGoModule rec {
   subPackages = [
     "nex"
     "agent/fc-image"
-    "agent/cmd/nex-agent"
   ];
 
   nativeBuildInputs = [makeWrapper];

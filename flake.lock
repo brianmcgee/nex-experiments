@@ -152,11 +152,11 @@
     "nex-source": {
       "flake": false,
       "locked": {
-        "lastModified": 1706872928,
-        "narHash": "sha256-BBO/cUqnNYD7oenlG76lfSOoDme6+NndBbuTNKseeF0=",
+        "lastModified": 1707301438,
+        "narHash": "sha256-Qh0MxTDp4lM0InxcLTzUGIAeltzS2IKj+x/lnJDToqQ=",
         "owner": "brianmcgee",
         "repo": "nex",
-        "rev": "24f37ac30d0beb17e465eed29315ff30365dc13d",
+        "rev": "e6892a25d5dcf9f9cc3925f3aa8b35e8c67eb6da",
         "type": "github"
       },
       "original": {

@@ -5,16 +5,27 @@
   ];
 
   config.perSystem = {
-    config,
     inputs',
+    self',
     pkgs,
     ...
   }: {
-    config.devshells.default = {
+    devShells.nex = pkgs.mkShell {
+      packages = with pkgs; [
+        go
+        go-task
+        ginkgo
+        firecracker
+        cni-plugins
+        self'.packages.tc-redirect-tap
+        glibc.static
+        nodePackages_latest.pnpm
+      ];
+    };
+
+    devshells.default = {
       commands = [
         {package = pkgs.gomod2nix;}
-        {package = pkgs.go-task;}
-        {package = pkgs.ginkgo;}
         {package = pkgs.firecracker;}
         {package = inputs'.flake-linter.packages.default;}
         {
