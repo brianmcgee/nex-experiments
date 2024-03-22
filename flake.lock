@@ -149,16 +149,15 @@
     "nex-source": {
       "flake": false,
       "locked": {
-        "lastModified": 1707493189,
-        "narHash": "sha256-+rMSWFuCJfs9LwgQQRAQcAkK+dkWgKTp6WnQrEN2Dn8=",
-        "owner": "brianmcgee",
+        "lastModified": 1710849401,
+        "narHash": "sha256-harBrVraA+gRfcoPNsoK/r+vUQJ6m/F/UWJRynHnHJk=",
+        "owner": "synadia-io",
         "repo": "nex",
-        "rev": "a88b37007686bdfd06425cc732390e7fd9cb9742",
+        "rev": "46440a39cd1212d5041488ad767e5de2cbd683e3",
         "type": "github"
       },
       "original": {
-        "owner": "brianmcgee",
-        "ref": "feat/better-path",
+        "owner": "synadia-io",
         "repo": "nex",
         "type": "github"
       }

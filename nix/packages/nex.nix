@@ -9,11 +9,11 @@
 }:
 buildGoModule rec {
   pname = "nex";
-  version = "0.1.3";
+  version = "0.1.5";
 
   src = nex-source;
 
-  vendorHash = "sha256-lGZuFTllsKjYXsEroH+HVocpEx5s2eZxXrDcALWwppY=";
+  vendorHash = "sha256-kJneA0a57s6FmzhEsrepbVgHwbSbDx3LYGmF5m78OHA=";
 
   ldflags = [
     "-s"
