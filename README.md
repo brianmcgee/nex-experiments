@@ -134,7 +134,7 @@ In a separate terminal we can now deploy the echo service:
 ❯ ECHO_BIN=$(nix build --print-out-paths .#echo-service)/bin/echo
 
 # the dev nats server uses JWT authentication, capture the JWT to be used by the service
-❯ NATS_JWT=$($NSC_HOME/creds/Nex/Exp/EchoService.creds | head -n 2 | tail -n 1)
+❯ NATS_JWT=$(cat $NSC_HOME/creds/Nex/Exp/EchoService.creds | head -n 2 | tail -n 1)
 
 # deploy the service
 ❯ nex --context ExpAdmin devrun $ECHO_BIN NATS_URL=nats://192.168.127.1:4222 NATS_JWT=$NATS_JWT
