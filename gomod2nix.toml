@@ -2,11 +2,11 @@ schema = 3
 
 [mod]
   [mod."github.com/klauspost/compress"]
-    version = "v1.17.2"
-    hash = "sha256-LlMbNhqmgQwUe4KKFK03R17S+gUo0/wPqmIFiwUb6Tg="
+    version = "v1.17.7"
+    hash = "sha256-UkW+tAFEZYj067z9gXDQjQx0dCF8noCn5OSw/APh4oo="
   [mod."github.com/nats-io/nats.go"]
-    version = "v1.32.0"
-    hash = "sha256-kDyFJuaf/oGnygVozUt2xsgQVmoc4ziZs1tlVqvNd8A="
+    version = "v1.34.0"
+    hash = "sha256-Vjy5KVOJH+lVJ8tZwvwFAKWI8qZqpAh2gtu8+rp2aNo="
   [mod."github.com/nats-io/nkeys"]
     version = "v0.4.7"
     hash = "sha256-ui/vSa2TGe6Pe2aAzitBa1Pd2vKgTMuHoBhYYy2p6Rw="
@@ -14,8 +14,8 @@ schema = 3
     version = "v1.0.1"
     hash = "sha256-7wddxVz3hnFg/Pf+61+MtQJJL/l8EaC8brHoNsmD64c="
   [mod."golang.org/x/crypto"]
-    version = "v0.18.0"
-    hash = "sha256-BuMVUxOIyfLo8MOhqYt+uQ8NDN6P2KdblKyfPxINzQ4="
+    version = "v0.21.0"
+    hash = "sha256-Z4k1LvFh4Jai7HUe6TTuXSG3VnuiRpMwdARIdZZqSYk="
   [mod."golang.org/x/sys"]
-    version = "v0.16.0"
-    hash = "sha256-ZkGclbp2S7NQYhbuGji6XokCn2Qi1BJy8dwyAOTV8sY="
+    version = "v0.18.0"
+    hash = "sha256-bIFhfFp7Sj0E1gcE3X3l/jecCfSRLgrkb8f0Yr6tVR0="
