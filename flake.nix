@@ -17,7 +17,7 @@
       inputs.nixpkgs.follows = "srvos/nixpkgs";
     };
     nixpkgs.follows = "srvos/nixpkgs";
-    flake-parts.follows = "srvos/flake-parts";
+    flake-parts.url = "github:hercules-ci/flake-parts";
     flake-root.follows = "nix-lib/flake-root";
     treefmt-nix = {
       url = "github:numtide/treefmt-nix";

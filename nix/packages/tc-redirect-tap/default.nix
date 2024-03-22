@@ -12,11 +12,11 @@ buildGoModule rec {
 
   # the source specifies go 1.11 and without patching the version to 1.17 we were getting the followin error:
   #     unsafe.Slice requires go1.17 or later (-lang was set to go1.16; check go.mod)
-  patches = [
-    ./go-version.patch
-  ];
+  #  patches = [
+  #    ./go-version.patch
+  #  ];
 
-  vendorHash = "sha256-WMQALl82aFVZITNluL7DtWJ/3E/BGzWkGlAauY21/OM=";
+  vendorHash = "sha256-kR1RjcSRnrVh92ubdjiMhoE1kMD/72vcdEv1Qez+HqM=";
 
   ldflags = ["-s" "-w"];
 

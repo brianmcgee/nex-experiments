@@ -54,7 +54,6 @@ func main() {
 			Handler: services.HandlerFunc(echoHandler),
 		},
 	})
-
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error adding service: %v\n", err)
 		return
